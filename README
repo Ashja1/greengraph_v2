@@ -1,5 +1,6 @@
 1. Committing changes
 
 * Do whatever local changes you want
-* Do: "git commit -m "Your message
+* Do: git add . (or specify file)
+* Do: git commit -m "Your message"
 * Do: git push

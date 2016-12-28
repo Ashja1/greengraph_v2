@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+
+#December 27, 2016, London
+#Ashja
+#More
+
+from matplotlib import pyplot as plt
+from greengraph_code import Greengraph
+from optparse import OptionParser
+
+parser = OptionParser()
+
+parser.add_option("-s", "--steps", dest="steps",
+                  help="Number of steps to use for the route", metavar="STEPS")
+parser.add_option("-f", "--from", dest="city1",
+                  help="help msg", metavar="CITY1")
+parser.add_option("-t", "--to", dest="city2",
+                  help="help msg", metavar="CITY2")
+
+(options, args) = parser.parse_args()
+
+#city1 = 'New York'
+#city2 = 'Chicago'
+#mygraph = Greengraph('New York','Chicago')
+#data = mygraph.green_between(20)
+
+mygraph = Greengraph(options.city1, options.city2)
+data = mygraph.green_between(options.steps)
+
+#plt.plot(data)
+print(data)
